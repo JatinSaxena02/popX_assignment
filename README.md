@@ -65,35 +65,83 @@ The project is split into two parts:
 ┣ 📜 README.md
 ┗ 📜 package.json
 
+# ⚡ Getting Started
+
+Follow these steps to set up the project on your local machine:
+
 ---
 
-## ⚙️ Setup Instructions
+## 1️⃣ Prerequisites
+Install Node.js (>= 16.x recommended)
+Install npm or yarn
 
-### 🔹 Clone Repo
-```bash
+yaml
+Copy code
+
+---
+
+## 2️⃣ Clone the Repository
 git clone https://github.com/jatinsaxena02/popx-assignment.git
 cd popx-assignment
 
-Backend Setup
+yaml
+Copy code
+
+---
+
+## 3️⃣ Backend Setup
 cd backend
 npm install
 npm run dev
 
-Frontend Setup
+yaml
+Copy code
+✅ Backend runs on: `http://localhost:5000`
+
+---
+
+## 4️⃣ Frontend Setup
 cd frontend
 npm install
 npm start
 
-🌍 Deployment
+yaml
+Copy code
+✅ Frontend runs on: `http://localhost:3000`
 
-Backend → Render
+---
 
-Frontend → Netlify
+## 5️⃣ Environment Variables
 
-API Base URL:
+Create a `.env` file inside **backend** with the following:
 
-👨‍💻 Author
+SECRET_KEY=your_jwt_secret
 
-Jatin Saxena
-📌 MCA @ LNCT College, Bhopal
-🔗 GitHub
+yaml
+Copy code
+
+---
+
+## 6️⃣ Run the Project
+
+- Start **backend** (API server)  
+- Start **frontend** (React app)  
+
+Now open 👉 `http://localhost:3000` in your browser.
+
+---
+
+## 🌍 Deployment
+
+- Backend → [Render](https://render.com)  
+- Frontend → [Netlify](https://www.netlify.com)  
+
+**Live API URL:**  
+https://popx-assignment-sz6n.onrender.com
+
+yaml
+Copy code
+
+---
+
+✅ You’re ready to go! 🎉
