@@ -21,7 +21,7 @@ The project is split into two parts:
 ---
 
 ## Go live 
-🚀 Express.js
+# 🚀 https://popxtask1.netlify.app/
 
 ## ✨ Features
 
