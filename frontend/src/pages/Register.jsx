@@ -19,7 +19,10 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // prevent page reload
     try {
-      const res = await axios.post("http://localhost:5000/register", form);
+      const res = await axios.post(
+        "https://popx-assignment-crey.onrender.com/register",
+        form
+      );
       login(res.data.token);
       // alert("Registered successfully!");
       navigate("/me");

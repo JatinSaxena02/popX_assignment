@@ -11,10 +11,13 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://popx-assignment-crey.onrender.com/login",
+        {
+          email,
+          password,
+        }
+      );
       login(res.data.token);
       //   alert("Success");
       navigate("/me");
