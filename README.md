@@ -50,4 +50,50 @@ The project is split into two parts:
 ---
 
 ## 📂 Folder Structure
+📦 popx-assignment
+┣ 📂 backend
+┃ ┣ 📜 server.js
+┃ ┣ 📜 routes.js
+┃ ┗ 📜 ...
+┣ 📂 frontend
+┃ ┣ 📂 src
+┃ ┃ ┣ 📂 components
+┃ ┃ ┣ 📂 pages
+┃ ┃ ┣ 📜 App.js
+┃ ┃ ┗ 📜 index.js
+┃ ┗ 📜 package.json
+┣ 📜 README.md
+┗ 📜 package.json
 
+---
+
+## ⚙️ Setup Instructions
+
+### 🔹 Clone Repo
+```bash
+git clone https://github.com/jatinsaxena02/popx-assignment.git
+cd popx-assignment
+
+Backend Setup
+cd backend
+npm install
+npm run dev
+
+Frontend Setup
+cd frontend
+npm install
+npm start
+
+🌍 Deployment
+
+Backend → Render
+
+Frontend → Netlify
+
+API Base URL:
+
+👨‍💻 Author
+
+Jatin Saxena
+📌 MCA @ LNCT College, Bhopal
+🔗 GitHub
