@@ -52,7 +52,9 @@ The project is split into two parts:
 ## 📂 Folder Structure
 
 📦 popx-assignment
-<pre> ```bash ┣ 📂 backend ┃ ┣ 📜 server.js ┃ ┣ 📜 routes.js ┃ ┗ 📜 ... ┣ 📂 frontend ┃ ┣ 📂 src ┃ ┃ ┣ 📂 components ┃ ┃ ┣ 📂 pages ┃ ┃ ┣ 📜 App.js ┃ ┃ ┗ 📜 index.js ┃ ┗ 📜 package.json ┣ 📜 README.md ┗ 📜 package.json ``` </pre>
+```
+      bash ┣ 📂 backend ┃ ┣ 📜 server.js ┃ ┣ 📜 routes.js ┃ ┗ 📜 ... ┣ 📂 frontend ┃ ┣ 📂 src ┃ ┃ ┣ 📂 components ┃ ┃ ┣ 📂 pages ┃ ┃ ┣ 📜 App.js ┃ ┃ ┗ 📜 index.js ┃ ┗ 📜 package.json ┣ 📜 README.md ┗ 📜          package.json
+ ``` 
 
 #⚡ Getting Started 
 
