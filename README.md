@@ -54,18 +54,23 @@ The project is split into two parts:
 📦 popx-assignment
 ```bash
 ┣ 📂 backend
-┃ ┣ 📜 server.js
-┃ ┣ 📜 routes.js
-┃ ┗ 📜 ...
+┃ ┣ 📂 node_modules
+┃ ┣ 📜 .env
+┃ ┗ 📜 server.js
 ┣ 📂 frontend
+┃ ┣ 📂 public
 ┃ ┣ 📂 src
-┃ ┃ ┣ 📂 components
+┃ ┃ ┣ 📂 assets
+┃ ┃ ┣ 📂 context
 ┃ ┃ ┣ 📂 pages
-┃ ┃ ┣ 📜 App.js
-┃ ┃ ┗ 📜 index.js
-┃ ┗ 📜 package.json
-┣ 📜 README.md
-┗ 📜 package.json
+┃ ┃ ┣ 📜 App.jsx
+┃ ┃ ┣ 📜 index.css
+┃ ┃ ┗ 📜 main.jsx
+┃ ┣ 📜 index.html
+┃ ┣ 📜 postcss.config.js
+┃ ┣ 📜 README.md
+┣ 📜 .gitignore
+
 ```
 
 #⚡ Getting Started 
