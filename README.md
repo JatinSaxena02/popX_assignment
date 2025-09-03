@@ -65,82 +65,47 @@ The project is split into two parts:
 ┣ 📜 README.md
 ┗ 📜 package.json
 
-# ⚡ Getting Started
+#⚡ Getting Started 
 
 Follow these steps to set up the project on your local machine:
 
----
-
-## 1️⃣ Prerequisites
-Install Node.js (>= 16.x recommended)
-Install npm or yarn
-
-yaml
-Copy code
-
----
-
-## 2️⃣ Clone the Repository
-git clone https://github.com/jatinsaxena02/popx-assignment.git
-cd popx-assignment
-
-yaml
-Copy code
-
----
-
-## 3️⃣ Backend Setup
-cd backend
-npm install
-npm run dev
-
-yaml
-Copy code
-✅ Backend runs on: `http://localhost:5000`
-
----
-
-## 4️⃣ Frontend Setup
-cd frontend
-npm install
-npm start
-
-yaml
-Copy code
-✅ Frontend runs on: `http://localhost:3000`
-
----
-
-## 5️⃣ Environment Variables
-
-Create a `.env` file inside **backend** with the following:
-
-SECRET_KEY=your_jwt_secret
-
-yaml
-Copy code
-
----
-
-## 6️⃣ Run the Project
-
-- Start **backend** (API server)  
-- Start **frontend** (React app)  
-
-Now open 👉 `http://localhost:3000` in your browser.
-
----
+1️⃣ Prerequisites
+```
+      Install Node.js(>= 16.x recommended)
+```
+          
+2️⃣ Clone the Repository
+```
+      git clone https://github.com/jatinsaxena02/popx-assignment.git
+      cd popx-assignment
+```
+3️⃣ Install Dependencies
+```
+      npm install
+      # or
+      yarn install
+```    
+4️⃣ 🔹 Backend Setup
+```
+      cd backend
+      npm install
+      npm run dev
+```
+5️⃣ 🔹 Frontend Setup
+```
+     cd frontend
+     npm install
+     npm start
+```
 
 ## 🌍 Deployment
+---
 
-- Backend → [Render](https://render.com)  
-- Frontend → [Netlify](https://www.netlify.com)  
+    - Backend → [Render](https://render.com)  
+    - Frontend → [Netlify](https://www.netlify.com)  
 
 **Live API URL:**  
-https://popx-assignment-sz6n.onrender.com
-
-yaml
-Copy code
+https://popxtask1.netlify.app/
 
 ---
 
