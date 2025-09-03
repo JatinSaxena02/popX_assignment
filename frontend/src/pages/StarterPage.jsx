@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 const StarterPage = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white">
-      <div className="w-[375px] h-[700px] flex flex-col justify-end p-6 bg-[#F7F8F9]">
+    <div className="flex justify-center items-center bg-white">
+      <div className="w-full max-w-[400px] flex flex-col justify-end h-[650px] md:h-[700px] bg-[#F7F8F9] m-6">
         {/* Text Section */}
-        <div className="mb-6">
+        <div className="mb-6 px-6">
           <h1 className="text-[23px] font-semibold text-[#1D2226] mb-2">
             Welcome to PopX
           </h1>
@@ -17,7 +17,7 @@ const StarterPage = () => {
         </div>
 
         {/* Buttons */}
-        <div className="space-y-3">
+        <div className="space-y-3 px-6">
           <button
             onClick={() => navigate("/register")}
             className="w-full bg-[#6C25FF] text-white text-sm font-medium py-3 rounded-md cursor-pointer"

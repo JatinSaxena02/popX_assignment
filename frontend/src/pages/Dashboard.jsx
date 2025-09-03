@@ -16,63 +16,86 @@ function Dashboard() {
       return;
     }
     const fetchUser = async () => {
-      const res = await axios.get(
-        "https://popx-assignment-sz6n.onrender.com/me",
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
-      setUser(res.data);
+      try {
+        const res = await axios.get(
+          "https://popx-assignment-sz6n.onrender.com/me",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
+        setUser(res.data);
+      } catch (err) {
+        console.error(err);
+        logout();
+        navigate("/");
+      }
     };
     fetchUser();
-  }, [token, navigate]);
+  }, [token, navigate, logout]);
 
   return (
-    <div className="flex justify-center items-center bg-white min-h-screen">
-      <div className="w-[375px] h-[700px] bg-[#F7F8F9] flex flex-col px-5">
-        <div className="bg-white w-[375px]  h-[80px]  -left-5 relative">
-          <h1 className="text-[28px] font-bold text-[#1D2226] mb-8 mt-5 ml-6">
+    <div className="flex justify-center items-center  bg-white">
+      <div className="bg-[#F7F8F9] w-full max-w-[400px] h-[650px] md:h-[700px] flex flex-col m-6">
+        {/* Header */}
+        <div className="bg-white w-full py-5 shadow-sm">
+          <h1 className="text-[22px] md:text-[26px] font-bold text-[#1D2226] px-6">
             Account Settings
           </h1>
         </div>
-        <div className="flex-col flex mt-10 gap-4">
-          <div className="flex-row flex">
-            <img src={image} alt="photo" className="w-20 h-20" />
-            <img
-              src={camera}
-              alt="photo"
-              className="w-6 h-6 relative -left-4 top-13"
-            />
-            {user && (
-              <div>
-                <p className="text-[#1D2226] text-[20px] font-bold">
-                  {user.name}
-                </p>
-                <p>{user.email}</p>
+
+        {/* Content (with spacing from header) */}
+        <div className="flex flex-col flex-grow justify-between">
+          <div className="flex flex-col gap-5 px-6 mt-5">
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                <img
+                  src={image}
+                  alt="profile"
+                  className="w-20 h-20 rounded-full object-cover"
+                />
+                <img
+                  src={camera}
+                  alt="camera"
+                  className="w-7 h-7 absolute bottom-1 -right-3"
+                />
               </div>
-            )}
-          </div>
-          <div>
-            <p className="font-medium text-[16px]">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem
-              ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum
-              dolor sit, amet consectetur adipisicing elit.
+              {user && (
+                <div className="ml-5">
+                  <p className="text-[#1D2226] text-[18px] md:text-[20px] font-bold">
+                    {user.name}
+                  </p>
+                  <p className="text-sm text-gray-600">{user.email}</p>
+                </div>
+              )}
+            </div>
+
+            <p className="text-[14px] md:text-[16px] text-gray-700 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+              molestiae distinctio eius laudantium earum consequuntur magni?
             </p>
+            <div className="border-t border-dashed border-gray-400 mb-5" />
+          </div>
+
+          {/* Divider + Button */}
+          <div>
+            <div className="border-t border-dashed border-gray-400 mx-6 mb-5" />
+            <div className="px-6 pb-6">
+              <button
+                className="w-full bg-[#6C25FF] hover:bg-[#5a1ee0] text-white text-[15px] font-medium py-3 rounded-lg transition duration-300"
+                onClick={() => {
+                  setUser(null);
+                  logout();
+                  navigate("/");
+                }}
+              >
+                Logout
+              </button>
+            </div>
           </div>
         </div>
-        <div className="mt-7 outline-1 outline-gray-500 outline-dashed w-[370px] -left-4 relative" />
-        <button
-          className="w-[335px] top-[640px] bg-[#6C25FF] text-white text-sm font-medium py-3 rounded-md mt-4 cursor-pointer absolute"
-          onClick={() => {
-            setUser(null);
-            logout();
-            navigate("/");
-          }}
-        >
-          Logout
-        </button>
       </div>
     </div>
   );
 }
+
 export default Dashboard;
