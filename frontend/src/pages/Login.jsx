@@ -11,16 +11,19 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://popx-assignment-sz6n.onrender.com/login",
+        {
+          email,
+          password,
+        }
+      );
       login(res.data.token);
       //   alert("Success");
       navigate("/me");
     } catch (err) {
       console.error(err);
-      alert("Login failed!");
+      alert(err.response?.data?.message || "Login failed!");
     }
   };
 

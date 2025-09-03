@@ -19,13 +19,16 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // prevent page reload
     try {
-      const res = await axios.post("http://localhost:5000/register", form);
+      const res = await axios.post(
+        "https://popx-assignment-sz6n.onrender.com/register",
+        form
+      );
       login(res.data.token);
       // alert("Registered successfully!");
       navigate("/me");
-    } catch (error) {
-      console.error(error);
-      alert("Something went wrong!");
+    } catch (err) {
+      console.error(err);
+      alert(err.response?.data?.message || "Login failed!");
     }
   };
 

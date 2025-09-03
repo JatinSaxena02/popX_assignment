@@ -4,19 +4,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: "*", // change to your frontend URL in production (e.g. "http://localhost:5173")
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: [
-      "Origin",
-      "X-Requested-With",
-      "Content-Type",
-      "Accept",
-      "Authorization",
-    ],
-  })
-);
+app.use(cors());
 require("dotenv").config();
 
 const Secret_key = process.env.SECRET_KEY;

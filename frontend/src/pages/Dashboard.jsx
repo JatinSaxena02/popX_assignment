@@ -16,9 +16,12 @@ function Dashboard() {
       return;
     }
     const fetchUser = async () => {
-      const res = await axios.get("http://localhost:5000/me", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await axios.get(
+        "https://popx-assignment-sz6n.onrender.com/me",
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       setUser(res.data);
     };
     fetchUser();
